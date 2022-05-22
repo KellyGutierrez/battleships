@@ -11,7 +11,7 @@ public class ShipDistribution {
 
     public ShipDistribution(Ship ship) {
         this.ship = ship;
-        this.coordinates =new Coordinate[ship.getNumPlace()];
+        this.coordinates =new Coordinate[ship.getNumPlaces()];
         this.state="FREE";
     }
 

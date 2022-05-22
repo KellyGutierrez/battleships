@@ -12,6 +12,7 @@ public class Coordinate {
         private int y;
         private boolean state;
 
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

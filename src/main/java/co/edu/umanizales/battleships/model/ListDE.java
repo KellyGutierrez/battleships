@@ -27,34 +27,36 @@ public class ListDE {
 
     public void add(ShipDistribution shipDistribution)
     {
-        if (this.head == null) {
-            NodeDE newNode = new NodeDE(shipDistribution);
-            this.head = newNode;
+        if(this.head == null)
+        {
+            this.head= new NodeDE(shipDistribution);
         }
         else {
             NodeDE temp = this.head;
-            while (temp.getNext() != null) {
+            while (temp.getNext() != null)
+            {
                 temp = temp.getNext();
             }
-            NodeDE newNode = new NodeDE(shipDistribution);
-            temp.setNext(newNode);
-            newNode.setPrevious(temp);
+            temp.setNext(new NodeDE(shipDistribution));
+            temp.getNext().setPrevious(temp);
         }
-        this.count++;
+        this.size++;
     }
 
     public void allToStart(ShipDistribution shipDistribution){
-        if(this.head == null) {
-            NodeDE newNode = new NodeDE(shipDistribution);
-            this.head = newNode;
+        shipDistribution.getShip().setId(this.size+1);
+        if(this.head == null)
+        {
+            this.head= new NodeDE(shipDistribution);
         }
-        else {
+        else
+        {
             NodeDE newNode = new NodeDE(shipDistribution);
             newNode.setNext(this.head);
             this.head.setPrevious(newNode);
             this.head = newNode;
         }
-        this.count++;
+        this.size++;
     }
 
     public List<ShipDistribution> listNodes() {

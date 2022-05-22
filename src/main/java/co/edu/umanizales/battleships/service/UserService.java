@@ -38,27 +38,28 @@ public class UserService {
 
     public String createPlayer(User player,byte numPlayer)
     {
+        if(numPlayer < 0 || numPlayer >2)
+        {
+            return "El número de jugador debe ser (1 o 2)";
+        }
+
         if(numPlayer==1 && player1 !=null)
         {
-            return "Ya se creó el jugador1";
+            return "Ya se encuentra creado el jugador1";
         }
         if(numPlayer==2 && player2 !=null)
         {
-            return "Ya se creó el jugador2";
+            return "Ya se encuentra creado el jugador2";
         }
-        if (numPlayer==1)
+        if(numPlayer==1)
         {
-            player1=player;
+            player1= player;
         }
         else
         {
-            player2=player;
-
+            player2= player;
         }
         return "Se ha creado exitosamente el jugador";
-
-
     }
-
 
 }

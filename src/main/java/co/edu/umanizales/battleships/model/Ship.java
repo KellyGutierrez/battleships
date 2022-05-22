@@ -7,11 +7,11 @@ import lombok.Data;
 public class Ship {
     private int id;
     private String name;
-    private byte numPlace;
+    private byte numPlaces;
 
-    public Ship(String name, byte numPlace){
+    public Ship(String name, byte numPlaces){
         this.name = name;
-        this.numPlace = numPlace;
+        this.numPlaces = numPlaces;
 
     }
 }
