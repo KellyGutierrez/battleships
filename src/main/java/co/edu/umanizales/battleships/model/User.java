@@ -28,4 +28,5 @@ public class User {
         UserDTO userDTO= new UserDTO(this.email,this.getTypeUser().getDescription());
         return userDTO;
     }
+
 }
